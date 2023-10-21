@@ -12,3 +12,9 @@ fibonachi.png:
 
 clean:
 	rm *.csv *.png
+
+all_images:
+	gnuplot -e "set datafile separator ','; set term png; set output 'square_wave.png'; plot 'synthetic_data.csv' using 1:2 with lines"  -e "set datafile separator ','; set term png; set output 'fibonachi.png'; plot 'synthetic_data.csv' using 1:3 with lines"
+
+
+
